@@ -16,11 +16,11 @@ const ProductHeader = ({ product }: ProductHeaderProps) => {
   const handleBackClick = () => router.back();
 
   return <div className="relative w-full min-h-[300px]">
-    <Button variant="secondary" size="icon" className="absolute z-50 top-4 left-4 rounded-full" onClick={handleBackClick}>
+    <Button variant="secondary" size="icon" className="absolute z-50 top-4 left-4 rounded-full bg-white" onClick={handleBackClick}>
       <ChevronLeftIcon />
     </Button>
-    <Image src={product.imageUrl} alt={product.name} fill className="object-contain" />
-    <Button variant="secondary" size="icon" className="absolute z-50 top-4 right-4 rounded-full">
+    <Image src={product.imageUrl} alt={product.name} fill className="object-contain bg-slate-100" />
+    <Button variant="secondary" size="icon" className="absolute z-50 top-4 right-4 rounded-full bg-white">
       <ScrollTextIcon />
     </Button>
   </div>;

@@ -1,13 +1,19 @@
 "use client"
 
 import { Prisma } from "@prisma/client";
-import { ChefHatIcon, ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import {
+  ChevronLeftIcon, ChevronRightIcon
+} from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { formatCurrency } from "@/helpers/format-currency";
+
+import CartSheet from "../../components/cart-sheet";
+import { CartContext } from "../../contexts/cart";
+import IngredientComponent from "./ingredient";
 
 interface ProductDetailsProps {
   product: Prisma.ProductGetPayload<{
@@ -16,6 +22,7 @@ interface ProductDetailsProps {
 }
 
 const ProductDetails = ({ product }: ProductDetailsProps) => {
+  const { toggleCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState<number>(1);
   const handleDecreaseQuantity = () => {
     setQuantity(quantity => {
@@ -27,8 +34,12 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
   }
   const handleIncreaseQuantity = () => setQuantity(quantity + 1);
 
+  const handleAddToCart = () => {
+    toggleCart();
+  }
+
   return <>
-    <div className="relative z-50 rounded-t-xl p-5 mt-[1.5rem] flex-auto flex flex-col overflow-hidden">
+    <div className="relative z-50 rounded-t-3xl p-5 mt-[1.5rem] flex-auto flex flex-col overflow-hidden bg-white">
       <div className="flex-auto flex flex-col overflow-hidden">
         {/* Restaurant */}
         <div className="flex items-center gap-1.5">
@@ -57,24 +68,16 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
             <p className="text-sm text-muted-foreground">{product.description}</p>
           </div>
           {/* Ingredients */}
-          <div className="mt-6 space-y-3">
-            <div className="flex items-center gap-1.5">
-              <ChefHatIcon size={18} />
-              <h4 className="font-semibold">Ingredientes</h4>
-            </div>
-            <ul className="list-disc px-5 text-sm text-muted-foreground">
-              {product.ingredients.map(ingredient => {
-                return <li key={ingredient}>{ingredient}</li>
-              })}
-            </ul>
-          </div>
+          <IngredientComponent product={product} />
         </ScrollArea>
       </div>
 
-      <Button className="w-full rounded-full">
+      <Button className="w-full rounded-full" onClick={handleAddToCart}>
         Adicionar à sacola
       </Button>
     </div>
+
+    <CartSheet />
   </>
 
 }

@@ -3,6 +3,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 
+import { CartProvider } from "./[slug]/menu/contexts/cart";
+
 const poppings = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
@@ -22,9 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppings.className}antialiased`}
+        className={`${poppings.className}antialiased bg-slate-100`}
       >
-        {children}
+        <CartProvider>{children}</CartProvider>
       </body>
     </html>
   );
