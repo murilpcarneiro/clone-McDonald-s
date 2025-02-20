@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useContext } from "react";
 
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
