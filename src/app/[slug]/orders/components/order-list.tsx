@@ -29,23 +29,22 @@ interface OrderListProps {
   >;
 }
 
+const getStatusLabel = (status: OrderStatus) => {
+  if (status === 'FINISHED') return 'Finalizado';
+  if (status === 'IN_PREPARATION') return 'Em preparo';
+  if (status === 'PENDING') return 'Pendente';
+  return "";
+}
 
 const OrderList = ({ orders }: OrderListProps) => {
   const router = useRouter();
-  const handleBack = () => {
+  const handleBackClick = () => {
     router.back();
-  }
-
-  const getStatusLabel = (status: OrderStatus) => {
-    if (status === 'FINISHED') return 'Finalizado';
-    if (status === 'IN_PREPARATION') return 'Em preparo';
-    if (status === 'PENDING') return 'Pendente';
-    return "";
   }
 
   return (
     <div className="space-y-6 p-6">
-      <Button size={"icon"} variant={"secondary"} className="rounded-full" onClick={handleBack}>
+      <Button size={"icon"} variant={"secondary"} className="rounded-full" onClick={handleBackClick}>
         <ChevronLeftIcon />
       </Button>
       <div className="flex items-center gap-3">
