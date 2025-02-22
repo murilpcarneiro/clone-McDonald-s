@@ -63,7 +63,7 @@ model Order {
   orderProducts     OrderProduct[]
   customerName      String
   customerCpf       String
-  createdt          DateTime          @default(now())
+  createdAt         DateTime          @default(now())
   updatedAt         DateTime          @updatedAt
 }
 
@@ -75,7 +75,7 @@ model OrderProduct {
   orderId   Int
   quantity  Int
   price     Float
-  createdt  DateTime @default(now())
+  createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
