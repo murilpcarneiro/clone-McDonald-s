@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Clone McDonald's 🍔🍟
 
-## Getting Started
+Este repositório contém um clone da interface do site do McDonald's, desenvolvido com Next.js e hospedado no Vercel. O objetivo deste projeto é aprimorar habilidades em desenvolvimento web moderno, recriando o design e funcionalidades do site oficial da rede de fast food.
 
-First, run the development server:
+## 🚀 Tecnologias Utilizadas
 
-```bash
+- Next.js
+- React
+- Tailwind CSS
+- TypeScript
+- Prisma
+
+## 🎯 Objetivo do Projeto
+
+Este projeto visa reproduzir a experiência do usuário na página inicial do site do McDonald's, utilizando tecnologias modernas de desenvolvimento web para criar uma aplicação rápida, responsiva e escalável.
+
+## 📸 Captura de Tela
+
+<img src="https://github.com/user-attachments/assets/b69f6fe5-5c33-4259-a286-ffe5944b6da5" height="500px"/>
+<img src="https://github.com/user-attachments/assets/7faa46af-7c8f-45f9-913f-5e1f6c5f1ded" height="500px"/>
+<img src="https://github.com/user-attachments/assets/6e902038-0d2f-4f1a-bd9e-ad8f2ddaaa3a" height="500px"/>
+<img src="https://github.com/user-attachments/assets/fddac182-6444-45c1-aaa7-af13b07b0016" height="500px"/>
+<img src="https://github.com/user-attachments/assets/8a8b957e-dc7a-4585-9b77-63fe77ffc65c" height="500px"/>
+<img src="https://github.com/user-attachments/assets/364d93d6-a7e5-4f92-ab8d-3d31f9d12748" height="500px"/>
+
+
+
+## 🛠️ Como Executar o Projeto
+
+Para rodar o projeto localmente, siga os passos abaixo:
+
+```sh
+# Clone este repositório
+git clone https://github.com/murilpcarneiro/clone-McDonald-s.git
+
+# Acesse a pasta do projeto
+cd clone-McDonald-s
+
+# Instale as dependências
+npm install
+
+# Execute o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Abra o navegador e acesse
+http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Layout responsivo e moderno
+- Design fiel ao site original do McDonald's
+- Utilização de Tailwind CSS para estilização eficiente
+- Integração com Prisma para gerenciamento de banco de dados
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Estrutura do Projeto
 
-## Learn More
+```sh
+clone-McDonald-s/
+├── .vscode/
+├── prisma/
+├── public/
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── pages/
+│   ├── styles/
+│   └── utils/
+├── .gitignore
+├── .prettierrc.json
+├── README.md
+├── next.config.ts
+├── package.json
+├── postcss.config.mjs
+├── tailwind.config.ts
+└── tsconfig.json
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Link do Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[Acesse o projeto online aqui](https://clone-mc-donald-s-nine.vercel.app/fsw-donalds)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👨‍💻 Autor
 
-## Deploy on Vercel
+Projeto desenvolvido por [Murilo P. Carneiro](https://github.com/murilpcarneiro).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 Licença
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto está sob a licença MIT. Sinta-se à vontade para utilizá-lo e modificá-lo conforme necessário.
+
+---
+
+💡 *Se gostou do projeto, deixe uma estrela no repositório!* ⭐
+
